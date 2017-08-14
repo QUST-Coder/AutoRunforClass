@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         高校邦自动刷课
+// @name         New Userscript
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
@@ -7,8 +7,9 @@
 // @match        *://qust.class.gaoxiaobang.com/class/*
 // @grant        none
 // ==/UserScript==
-/* jshint -W097 */
-'use strict';
+
+(function() {
+    'use strict';
 function start(){
 		var classFix = document.getElementsByClassName("gxb-icon-check unchecked");
 	//勾选全部答案
@@ -55,4 +56,5 @@ for(var i=0;i<oBtn2.length;i++){
 }
 window.setInterval(start,5000);
 
-// Your code here...
+    // Your code here...
+})();
