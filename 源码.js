@@ -9,25 +9,26 @@
 // ==/UserScript==
 /* jshint -W097 */
 'use strict';
-function start(){
+(function () {
+	function start(){
 		var classFix = document.getElementsByClassName("gxb-icon-check unchecked");
-	//勾选全部答案
-for(var i=0;i<classFix.length;i++){
-	var Fix = classFix[i];
-	Fix.className="gxb-icon-check checked";
-}
-   //提交
-	var oBtn = document.getElementsByClassName('gxb-btn_ submit');
-for(var i=0;i<oBtn.length;i++){
-	var click = oBtn[i];
-	click.click();	
-}
-	//继续观看
-	var oBtn2 = document.getElementsByClassName('gxb-btn_ player');
-for(var i=0;i<oBtn2.length;i++){
-	var click = oBtn2[i];
-	click.click();	
-}}
-window.setInterval(start,10000);
-
-// Your code here...
+		//勾选全部答案
+		for(var i=0;i<classFix.length;i++) {
+			var Fix = classFix[i];
+			Fix.className="gxb-icon-check checked";
+		}
+    	//提交
+		var oBtn = document.getElementsByClassName('gxb-btn_ submit');
+		for(var i=0;i<oBtn.length;i++ ){
+			var click = oBtn[i];
+			click.click();	
+		}
+		//继续观看
+		var oBtn2 = document.getElementsByClassName('gxb-btn_ player');
+			for(var i=0;i<oBtn2.length;i++) {
+			var click = oBtn2[i];
+			click.click();	
+		}
+	}
+	window.setInterval(start, 10000);
+})();
