@@ -11,7 +11,10 @@
 (function() {
     'use strict';
 function start(){
-		var classFix = document.getElementsByClassName("gxb-icon-check unchecked");
+	//加速
+var vid = document.getElementById("vjs_video_3_html5_api");
+vid.playbackRate = 2.5;
+	var classFix = document.getElementsByClassName("gxb-icon-check unchecked");
 	//勾选全部答案
 for(var i=0;i<classFix.length;i++){
 	var Fix = classFix[i];
